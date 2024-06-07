@@ -1,4 +1,4 @@
-<img width="638" alt="Screenshot 2024-02-22 at 15 45 06" src="https://github.com/Jonathanpangkey/jwt-student-management/assets/102292312/45304027-cd1b-44f6-aa18-c691203da2a2">## System Documentation: jwt-student-management
+## System Documentation: jwt-student-management
 
 ### Overview
 This is the Spring Boot application that integrates JWT authentication with a student management system. It provides secure endpoints for user registration, authentication, and student data management, including creation, retrieval, updating, and deletion of student records.
