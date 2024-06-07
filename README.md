@@ -1,12 +1,11 @@
-## System Documentation: jwt-student-management
+<img width="638" alt="Screenshot 2024-02-22 at 15 45 06" src="https://github.com/Jonathanpangkey/jwt-student-management/assets/102292312/45304027-cd1b-44f6-aa18-c691203da2a2">## System Documentation: jwt-student-management
 
 ### Overview
 This is the Spring Boot application that integrates JWT authentication with a student management system. It provides secure endpoints for user registration, authentication, and student data management, including creation, retrieval, updating, and deletion of student records.
 
 ### Architecture and Flow
 <img width="606" alt="jwtservicee" src="https://github.com/Jonathanpangkey/jwtauth_springboot/assets/102292312/3c646c86-c4f3-4628-8654-8ea3d201788c">
-<img width="638" alt="Screenshot 2024-02-22 at 15 45 06" src="https://github.com/Jonathanpangkey/StudentServiceAPI/assets/102292312/a3a26e47-86e3-4d5c-8b15-d0f7001fe143">
-
+<img width="638" alt="Screenshot 2024-02-22 at 15 45 06" src="https://github.com/Jonathanpangkey/jwt-student-management/assets/102292312/80dd9934-1edc-4421-8183-1ab42315f039">
 The application utilizes JWT authentication to secure endpoints. The JWT authentication filter validates tokens and sets up the security context for authenticated requests. The student management system follows a three-layered architecture: the API layer handles requests and responses, the service layer contains business logic, and the data access layer interacts with the PostgreSQL database.
 
 ### Data Models
@@ -25,7 +24,7 @@ The application utilizes JWT authentication to secure endpoints. The JWT authent
 
 ### Endpoints Overview
 
-#### User Endpoints
+#### User Endpoints (Open endpoints)
 1. **User Registration Endpoint**
    - URL: `/api/v1/auth/register`
    - Method: `POST`
@@ -64,12 +63,8 @@ The application utilizes JWT authentication to secure endpoints. The JWT authent
      }
      ```
 
-3. **Demo Endpoint**
-   - URL: `/api/v1/demo-controller`
-   - Method: `GET`
-   - Description: A demo endpoint for testing purposes.
-
-#### Student Endpoints
+#### Student Endpoints (Protected endpoints)
+Protected endpoints require a valid JWT token to access. These endpoints are secured using Spring Security filters that check the presence and validity of the JWT token before granting access.
 1. **Retrieve All Students**
    - URL: `/api/v1/student`
    - Method: `GET`
