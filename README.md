@@ -9,7 +9,7 @@ This is the Spring Boot application that integrates JWT authentication with a st
 <img width="606" alt="jwtservicee" src="https://github.com/Jonathanpangkey/jwt-student-management/assets/102292312/cf0a2905-aa35-4d67-99a0-b5ef53d4b8e8"> <br />
 
 In this application, the JWT authentication filter is the initial point of execution. It validates the JWT token, starting by checking if the token is present. If missing, it sends a 403 response. Next, it fetches user details from the database based on the token's subject (user email). If the user doesn't exist, it returns a 403; otherwise, it proceeds to validate the token against the user. If the token is invalid (expired or not for that user), it sends a 403; otherwise, it updates the security context holder, marking the user as authenticated. 
-Once the user is authenticated through the JWT authentication filter, they gain access to various services, including CRUD operations for student entities. This means that upon successful validation of the JWT token and confirmation of the user's existence and authorization, the application grants them privileges to perform actions such as creating, reading, updating, and deleting student records.
+Once the user authentication process is completed by the JWT authentication filter, the request is forwarded to the controller. Here, users can access student endpoints for further processing, such as interacting with databases and generating responses.
 
 ### Data Models
 - **User:**
