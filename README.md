@@ -27,12 +27,6 @@ Once the user authentication process is completed by the JWT authentication filt
 
 ### Endpoints Overview
 
-### Base URL:
-All API endpoints are prefixed with the following base URL:
-if you want to run on your local machine the base URL will be http://localhost:8080, but if you want to access the public url for this app <br />
-the base url is :
-https://restapistudent-frgxexenhfbbcsbm.eastus-01.azurewebsites.net/
-
 #### User Endpoints (Open endpoints)
 1. **User Registration Endpoint**
    - URL: `/api/v1/auth/register`
